@@ -133,7 +133,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         var font = UIFont(name: "Futura", size: 0.15)
         font = font?.withTraits(traits: .traitBold)
         bubble.font = font
-        bubble.alignmentMode = kCAAlignmentCenter
+        bubble.alignmentMode = convertFromCATextLayerAlignmentMode(CATextLayerAlignmentMode.center)
         bubble.firstMaterial?.diffuse.contents = UIColor.orange
         bubble.firstMaterial?.specular.contents = UIColor.white
         bubble.firstMaterial?.isDoubleSided = true
@@ -190,7 +190,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Get Classifications
         let classifications = observations[0...0] // top result
-            .flatMap({ $0 as? VNClassificationObservation })
+            .compactMap({ $0 as? VNClassificationObservation })
             .map({ "\($0.identifier) \(String(format:"- %.2f", $0.confidence))" })
             .joined(separator: "\n")
         
@@ -241,8 +241,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
 extension UIFont {
     // Based on: https://stackoverflow.com/questions/4713236/how-do-i-set-bold-and-italic-on-uilabel-of-iphone-ipad
-    func withTraits(traits:UIFontDescriptorSymbolicTraits...) -> UIFont {
-        let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptorSymbolicTraits(traits))
+    func withTraits(traits:UIFontDescriptor.SymbolicTraits...) -> UIFont {
+        let descriptor = self.fontDescriptor.withSymbolicTraits(UIFontDescriptor.SymbolicTraits(traits))
         return UIFont(descriptor: descriptor!, size: 0)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCATextLayerAlignmentMode(_ input: CATextLayerAlignmentMode) -> String {
+	return input.rawValue
 }
