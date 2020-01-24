@@ -17,7 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AEC748F41F18C24700334D87 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Inceptionv3.mlmodel; path = ../../Inceptionv3.mlmodel; sourceTree = "<group>"; };
+		2CB14FAC23A471680089373C /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
+		AEC748F41F18C24700334D87 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 		AEEC85611F18B8C600D43B9B /* CoreML in ARKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreML in ARKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEEC85641F18B8C600D43B9B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEEC85661F18B8C600D43B9B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -39,6 +40,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CB14FAE23A472A10089373C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AEC748F41F18C24700334D87 /* Inceptionv3.mlmodel */,
+				2CB14FAC23A471680089373C /* MobileNet.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AEEC85581F18B8C600D43B9B = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +75,7 @@
 				AEEC856D1F18B8C600D43B9B /* Assets.xcassets */,
 				AEEC856F1F18B8C600D43B9B /* LaunchScreen.storyboard */,
 				AEEC85721F18B8C600D43B9B /* Info.plist */,
-				AEC748F41F18C24700334D87 /* Inceptionv3.mlmodel */,
+				2CB14FAE23A472A10089373C /* Models */,
 			);
 			path = "CoreML in ARKit";
 			sourceTree = "<group>";
@@ -281,10 +291,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3SL39F2287;
+				DEVELOPMENT_TEAM = TUE9632B3P;
 				INFOPLIST_FILE = "CoreML in ARKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompanyname.CoreML-in-ARKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "digital.steampunk.CoreML-in-ARKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -295,10 +305,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3SL39F2287;
+				DEVELOPMENT_TEAM = TUE9632B3P;
 				INFOPLIST_FILE = "CoreML in ARKit/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourcompanyname.CoreML-in-ARKit";
+				PRODUCT_BUNDLE_IDENTIFIER = "digital.steampunk.CoreML-in-ARKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
