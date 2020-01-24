@@ -31,7 +31,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.delegate = self
         
         // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
+//        sceneView.showsStatistics = false
         
         // Create a new scene
         let scene = SCNScene()
@@ -180,16 +180,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     func classificationCompleteHandler(request: VNRequest, error: Error?) {
         // Catch Errors
         if error != nil {
-            print("Error: " + (error?.localizedDescription)!)
+//            print("Error: " + (error?.localizedDescription)!)
             return
         }
         guard let observations = request.results else {
-            print("No results")
+//            print("No results")
             return
         }
         
         // Get Classifications
-        let classifications = observations[0...1] // top 2 results
+        let classifications = observations[0...0] // top result
             .flatMap({ $0 as? VNClassificationObservation })
             .map({ "\($0.identifier) \(String(format:"- %.2f", $0.confidence))" })
             .joined(separator: "\n")
@@ -197,8 +197,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         DispatchQueue.main.async {
             // Print Classifications
-            print(classifications)
-            print("--")
+//            print(classifications)
+//            print("--")
             
             // Display Debug Text on screen
             var debugText:String = ""

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,39 +13,38 @@
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="CoreML_in_ARKit" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="tix-nH-sfG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="tix-nH-sfG">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XMs-gA-sya">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMs-gA-sya">
+                                <rect key="frame" x="0.0" y="33" width="812" height="342"/>
                             </arscnView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hWs-m5-HIX">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I don't know" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hWs-m5-HIX">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="33"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.51875535100000003" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="Psf-Wg-SBy"/>
+                                    <constraint firstAttribute="height" constant="33" id="Psf-Wg-SBy"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-JN-lWZ">
-                                <rect key="frame" x="176" y="322" width="22" height="22"/>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsc-JN-lWZ">
+                                <rect key="frame" x="395" y="176.66666666666666" width="22" height="22"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="fsc-JN-lWZ" firstAttribute="centerY" secondItem="tix-nH-sfG" secondAttribute="centerY" id="F1P-V6-WRz"/>
-                            <constraint firstItem="fsc-JN-lWZ" firstAttribute="centerX" secondItem="tix-nH-sfG" secondAttribute="centerX" id="FRB-xB-mYc"/>
-                            <constraint firstItem="hWs-m5-HIX" firstAttribute="trailing" secondItem="W2V-Gj-Pwx" secondAttribute="trailing" id="Pop-CU-HNn"/>
-                            <constraint firstItem="hWs-m5-HIX" firstAttribute="leading" secondItem="W2V-Gj-Pwx" secondAttribute="leading" id="bYb-Zu-hM1"/>
-                            <constraint firstItem="XMs-gA-sya" firstAttribute="trailing" secondItem="W2V-Gj-Pwx" secondAttribute="trailing" id="bg6-Jm-8Wb"/>
-                            <constraint firstItem="XMs-gA-sya" firstAttribute="leading" secondItem="W2V-Gj-Pwx" secondAttribute="leading" id="fgq-Rs-G2A"/>
+                            <constraint firstItem="XMs-gA-sya" firstAttribute="bottom" secondItem="tix-nH-sfG" secondAttribute="bottom" id="4WM-oN-UJ5"/>
+                            <constraint firstItem="XMs-gA-sya" firstAttribute="leading" secondItem="tix-nH-sfG" secondAttribute="leading" id="7AY-rW-u8R"/>
+                            <constraint firstItem="hWs-m5-HIX" firstAttribute="trailing" secondItem="tix-nH-sfG" secondAttribute="trailing" id="Pop-CU-HNn"/>
+                            <constraint firstItem="XMs-gA-sya" firstAttribute="trailing" secondItem="tix-nH-sfG" secondAttribute="trailing" id="UL7-2c-DNl"/>
+                            <constraint firstItem="fsc-JN-lWZ" firstAttribute="centerX" secondItem="XMs-gA-sya" secondAttribute="centerX" id="UTY-8n-5s3"/>
+                            <constraint firstItem="hWs-m5-HIX" firstAttribute="leading" secondItem="tix-nH-sfG" secondAttribute="leading" id="bYb-Zu-hM1"/>
                             <constraint firstItem="hWs-m5-HIX" firstAttribute="top" secondItem="tix-nH-sfG" secondAttribute="top" id="hFg-7r-eMc"/>
-                            <constraint firstItem="XMs-gA-sya" firstAttribute="top" secondItem="tix-nH-sfG" secondAttribute="top" id="vHp-rp-JQw"/>
-                            <constraint firstItem="XMs-gA-sya" firstAttribute="bottom" secondItem="W2V-Gj-Pwx" secondAttribute="bottom" id="zam-8D-9DF"/>
+                            <constraint firstItem="fsc-JN-lWZ" firstAttribute="centerY" secondItem="XMs-gA-sya" secondAttribute="centerY" id="sG7-0G-V9a"/>
+                            <constraint firstItem="XMs-gA-sya" firstAttribute="top" secondItem="tix-nH-sfG" secondAttribute="top" constant="33" id="vHp-rp-JQw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W2V-Gj-Pwx"/>
                     </view>
